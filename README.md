@@ -1,4 +1,4 @@
 emacs
 =====
 
-.emacs etc.
+.emacs content, etc.
