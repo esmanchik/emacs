@@ -12,6 +12,14 @@
   (package-initialize))
 
 (add-to-list 'load-path "~/.emacs.d/vendor")
+
+(require 'tramp) ; Fixes "Recursive load" error for dired and projectile according to http://ergoemacs.org/emacs/emacs_dired_recursive_load_error.html
+
+(require 'projectile)
+
+(projectile-global-mode)
+(setq projectile-enable-caching t)
+
 (require 'nrepl)
 
 (setq-default indent-tabs-mode nil)
@@ -20,6 +28,7 @@
 (put 'erase-buffer 'disabled nil)
 
 (global-linum-mode 1)
+(global-auto-revert-mode t)
 
 (setq load-path (cons "~/.emacs.d/vendor/geben-0.26" load-path))
 
@@ -27,6 +36,7 @@
 
 ;; Debug a simple PHP script.
 ;; Change the session key geben-xdebug to any session key text you like
+;; To debug from web use http://localhost/index.php?XDEBUG_SESSION_START=geben-xdebug
 (defun geben-php-debug ()
   "Run current PHP script for debugging with geben"
   (interactive)

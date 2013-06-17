@@ -3,6 +3,10 @@ emacs
 
 .emacs content, etc.
 
+## Emacs Version 
+
+23.4.1
+
 ## Setup
        cd
        git clone https://github.com/esmanchik/emacs.git
