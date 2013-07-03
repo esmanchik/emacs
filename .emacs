@@ -1,16 +1,6 @@
 (setenv "ERGOEMACS_KEYBOARD_LAYOUT" "us") ; US
 (load-file "~/.emacs.d/ergoemacs_1.9.3.1/site-lisp/site-start.el")
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))
-
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
 (require 'tramp) ; Fixes "Recursive load" error for dired and projectile according to http://ergoemacs.org/emacs/emacs_dired_recursive_load_error.html
