@@ -36,6 +36,18 @@
     (buffer-file-name) " &"))
   )
 
+; infix expressions without priority
+(defun tree2 (args)
+  (if (< (length args) 2) (car args)
+    (let ((oparg (last args 2)))
+      (list (car oparg) 
+            (tree2 (butlast args 2)) 
+            (nth 1 oparg)
+            ))))
+
+(defmacro inf (&rest args) `,(tree2 args))
+
+; open file by pattern
 (defun filter (condp lst)
   (delq nil
         (mapcar (lambda (x) (and (funcall condp x) x)) lst)))
