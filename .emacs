@@ -20,6 +20,8 @@
 (global-linum-mode 1)
 (global-auto-revert-mode t)
 
+(global-set-key (kbd "M-m") 'menu-bar-open)
+
 (setq load-path (cons "~/.emacs.d/vendor/geben-0.26" load-path))
 
 (autoload 'geben "geben" "DBGp protocol frontend, a script debugger" t)
