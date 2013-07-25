@@ -20,7 +20,18 @@
 (global-linum-mode 1)
 (global-auto-revert-mode t)
 
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+
 (global-set-key (kbd "M-m") 'menu-bar-open)
+; same to work on Android
+(global-set-key (kbd "A-m") 'menu-bar-open)
+(global-set-key (kbd "A-i") 'previous-line)
+(global-set-key (kbd "A-k") 'next-line)
+(global-set-key (kbd "A-l") 'forward-char)
+(global-set-key (kbd "A-j") 'backward-char)
+(global-set-key (kbd "A-x") 'execute-extended-command)
+(global-set-key (kbd "A-a") 'execute-extended-command)
 
 (setq load-path (cons "~/.emacs.d/vendor/geben-0.26" load-path))
 
