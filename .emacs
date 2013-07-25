@@ -23,6 +23,7 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+(global-set-key (kbd "C-x o") 'move-cursor-next-pane)
 (global-set-key (kbd "M-m") 'menu-bar-open)
 ; same to work on Android
 (global-set-key (kbd "A-m") 'menu-bar-open)
