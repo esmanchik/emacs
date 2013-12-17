@@ -1,5 +1,6 @@
 (setenv "ERGOEMACS_KEYBOARD_LAYOUT" "us") ; US
 (load-file "~/.emacs.d/ergoemacs_1.9.3.1/site-lisp/site-start.el")
+(ergoemacs-mode)
 
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
@@ -10,7 +11,7 @@
 (projectile-global-mode)
 (setq projectile-enable-caching t)
 
-(require 'nrepl)
+;(require 'nrepl)
 
 (setq-default indent-tabs-mode nil)
 (setq-default c-basic-offset 4)
@@ -33,6 +34,7 @@
 (global-set-key (kbd "A-j") 'backward-char)
 (global-set-key (kbd "A-x") 'execute-extended-command)
 (global-set-key (kbd "A-a") 'execute-extended-command)
+(global-set-key (kbd "C-l") 'goto-line)
 
 (setq load-path (cons "~/.emacs.d/vendor/geben-0.26" load-path))
 
