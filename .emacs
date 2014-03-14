@@ -1,3 +1,7 @@
+(require 'package)
+(add-to-list 'package-archives
+  '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
 (setenv "ERGOEMACS_KEYBOARD_LAYOUT" "us") ; US
 (load-file "~/.emacs.d/ergoemacs_1.9.3.1/site-lisp/site-start.el")
 (ergoemacs-mode)
