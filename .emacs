@@ -2,10 +2,6 @@
 (add-to-list 'package-archives
   '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
-(setenv "ERGOEMACS_KEYBOARD_LAYOUT" "us") ; US
-(load-file "~/.emacs.d/ergoemacs_1.9.3.1/site-lisp/site-start.el")
-(ergoemacs-mode)
-
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
 (require 'tramp) ; Fixes "Recursive load" error for dired and projectile according to http://ergoemacs.org/emacs/emacs_dired_recursive_load_error.html
