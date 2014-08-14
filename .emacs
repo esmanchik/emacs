@@ -22,6 +22,8 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+(savehist-mode 1)
+
 ; use A-s for switch to other-window
 (global-set-key (kbd "C-x o") 'other-window)
 (global-set-key (kbd "M-m") 'menu-bar-open)
