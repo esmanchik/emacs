@@ -11,6 +11,7 @@
 (projectile-global-mode)
 (setq projectile-enable-caching t)
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq-default indent-tabs-mode nil)
 (setq-default c-basic-offset 4)
 (setq-default tab-width 4)
