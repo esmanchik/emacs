@@ -58,8 +58,8 @@
 (defun tree2 (args)
   (if (< (length args) 2) (car args)
     (let ((oparg (last args 2)))
-      (list (car oparg) 
-            (tree2 (butlast args 2)) 
+      (list (car oparg)
+            (tree2 (butlast args 2))
             (nth 1 oparg)
             ))))
 
@@ -74,9 +74,9 @@
   (interactive)
   (let (name stdout files enumerated selected file open)
     (setq name (read-from-minibuffer (concat "Search in folder " default-directory " filename pattern: ")))
-    (setq stdout (shell-command-to-string 
+    (setq stdout (shell-command-to-string
                   (concat "find -L . -wholename " name)))
-    (setq files (mapcar (lambda (file) (substring file 2)) 
+    (setq files (mapcar (lambda (file) (substring file 2))
                         (filter (lambda (file) (not (string= "" file)))
                                 (split-string stdout "\n"))))
     (setq enumerated (let ((n 0))
@@ -84,9 +84,9 @@
                                     (setq n (+ n 1))
                                     (format "%d: %s" n file))
                                   files "\n")))
-    (setq selected (read-from-minibuffer 
+    (setq selected (read-from-minibuffer
                     (concat enumerated "\nResult number: ")))
     (setq file (nth (- (string-to-int selected) 1) files))
-    (setq open (read-from-minibuffer 
+    (setq open (read-from-minibuffer
                 (concat "Your selected " file ", open it? (y/n): ")))
     (when (string= "y" open) (find-file file))))
