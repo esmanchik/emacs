@@ -13,6 +13,7 @@
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 (setq-default indent-tabs-mode nil)
+(setq-default c-default-style "linux")
 (setq-default c-basic-offset 4)
 (setq-default tab-width 4)
 (put 'erase-buffer 'disabled nil)
