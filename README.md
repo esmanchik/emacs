@@ -21,3 +21,4 @@ emacs
  * r <program_args>
  * n
  * other usual GDB commands
+ * type (global-set-key (kbd "<f8>") 'gud-next) in *scratch* and press C-x C-e
