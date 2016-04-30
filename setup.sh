@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ABSPATH=$(cd "$(dirname "$0")"; pwd)
+
 set -e
 
 sudo apt-get install clang libclang-dev llvm git
@@ -14,3 +16,5 @@ git clone https://github.com/Golevka/emacs-clang-complete-async.git
 cd emacs-clang-complete-async
 make
 cd ..
+
+cp $ABSPATH/init.el ~/.emacs.d
