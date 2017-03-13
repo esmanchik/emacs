@@ -24,6 +24,7 @@
 (my-ac-config)
 
 (setq-default indent-tabs-mode nil)
-(setq-default tab-width 2)
+(setq-default tab-width 4)
+(setq-default c-basic-offset 4)
 
 (savehist-mode 1)
